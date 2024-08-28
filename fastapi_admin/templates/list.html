@@ -211,9 +211,7 @@
     <script>
         function confirmAction(method) {
             if (method === "DELETE") {
-                if (!confirm("{{ _('delete_confirmation') }}")) {
-                    return false;
-                }
+                return confirm("{{ _('delete_confirmation') }}");
             }
             return true;
         }
